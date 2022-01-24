@@ -1,0 +1,10 @@
+#pragma once
+#include "CColoredBall.h"
+
+class CDisapperedBall : public CColoredBall
+{
+public:
+  CDisapperedBall(void);
+  virtual ~CDisapperedBall(void);
+};
+

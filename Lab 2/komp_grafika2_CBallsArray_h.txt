@@ -1,0 +1,25 @@
+#pragma once
+#include "CBall.h"
+#include "CColoredBall.h"
+#include "CDisapperedBall.h"
+
+class CBallsArray
+{
+  CBall** balls;
+  int count;
+  int max_balls;
+
+public:
+  CBallsArray(int max_balls);
+  virtual ~CBallsArray(void);
+
+  CBall* Add();
+  void Draw(HDC hdc);
+  void Move(DWORD delta_ticks);
+  void SetBounds(RECT bnds);
+
+  CColoredBall* AddColoredBall();
+
+  CDisapperedBall* AddDisapearedBall();
+
+};

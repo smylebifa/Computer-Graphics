@@ -1,0 +1,24 @@
+#pragma once
+
+#include <windowsx.h>
+#include <Windows.h>
+
+class CHLimiter
+{
+	int y;
+	int xmin, xmax;
+	HPEN hPen;
+	int type_of_color;
+
+public:
+	CHLimiter(int xmin, int xmax, int y);
+	~CHLimiter();
+
+	void Draw(HDC dc);
+	int GetMaxX();
+	int GetMinX();
+	int GetY();
+	void MoveX(int inc);
+	void MoveY(int inc);
+	void changeColor(int type_of_color);
+};

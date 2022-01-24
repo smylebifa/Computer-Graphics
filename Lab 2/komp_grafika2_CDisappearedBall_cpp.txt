@@ -1,0 +1,12 @@
+#include "CDisapperedBall.h"
+
+
+CDisapperedBall::CDisapperedBall(void)
+{
+  this->isDisappear = true;
+}
+
+
+CDisapperedBall::~CDisapperedBall()
+{
+}

@@ -1,0 +1,31 @@
+#pragma once
+#include "CBall.h"
+#include "CColoredBall.h"
+#include "CTrap.h"
+
+class CBallsArray
+{
+  CBall** balls;
+  int count;
+  int max_balls;
+  double gF;
+
+public:
+  CBallsArray(int max_balls);
+  virtual ~CBallsArray(void);
+
+
+  CBall* Add();
+  void Draw(HDC hdc);
+  void Move(DWORD delta_ticks);
+  void SetBounds(RECT bnds);
+
+  CColoredBall* AddColoredBall();
+
+  void SetGravityFactor(double gF);
+
+  CTrap* trap;
+
+  CTrap* trap2;
+
+};
